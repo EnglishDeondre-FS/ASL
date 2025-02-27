@@ -1,11 +1,21 @@
-# ASL Exploring other languages
+# Space Object API 
 
-- [ ] PHP
-- [x] GoLang
-- [x] Nodejs
-- [x] Ruby
-- [x] Java
-- [x] Lua
-- [x] Rust
-- [x] Python
-- [x] C++ 
+Requirements
+Planet	
+Name (string)
+Size (integer)
+Description (text)
+Belongs To Many Stars
+
+Star	
+Name (string)
+Size (integer)
+Description (text)
+Belongs To Galaxy
+Has Many Planets
+
+Galaxy	
+Name (string)
+Size (integer)
+Description (text)
+Has Many Stars
