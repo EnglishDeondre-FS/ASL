@@ -12,13 +12,17 @@ Star.init({
   },
   Size: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
   },
   Description: {
     type: DataTypes.TEXT,
-    allowNull: false,
+    allowNull: true,
+  },
+  Image: {
+    type: DataTypes.STRING,
+    allowNull: true
   }
-},
+ },
 {sequelize, modelName: 'star'}
 );
 
@@ -29,12 +33,16 @@ Planet.init({
   },
   Size: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
   },
   Description: {
     type: DataTypes.TEXT,
-    allowNull: false,
+    allowNull: true,
   },
+  Image: {
+    type: DataTypes.STRING,
+    allowNull: true
+  }
  },
 {sequelize, modelName: 'planet'}
 );
@@ -46,15 +54,19 @@ Galaxy.init({
   },
   Size: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
   },
   Description: {
     type: DataTypes.TEXT,
-    allowNull: false,
+    allowNull: true,
+  },
+  Image: {
+    type: DataTypes.STRING,
+    allowNull: true
   }
-},
-{sequelize, modelName: 'galaxy'
-});
+ },
+{sequelize, modelName: 'galaxy'}
+);
 
 Galaxy.hasMany(Star);
 Star.belongsTo(Galaxy);
